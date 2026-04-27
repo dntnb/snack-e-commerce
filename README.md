@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+# 🍿 SnackStop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple and clean snack ordering web app built with React. Browse a catalog of snacks, add them to your cart, adjust quantities, and place your order — all in one page.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📸 Features
 
-### `npm start`
+- **Product Catalog** — 12 snack items displayed in a responsive grid with images, names, and prices
+- **Add to Cart** — Click to add items; the button updates to show the item has been added
+- **Cart Sidebar** — A slide-in panel showing all selected items with quantity controls and subtotals
+- **Live Order Summary** — Real-time item count badge on the cart button and running total in the sidebar
+- **Order Confirmation** — A receipt-style summary screen shown after placing an order
+- **Order Again** — Reset the entire app back to the catalog with one click
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛠️ Built With
 
-### `npm test`
+- [React](https://reactjs.org/) — UI and state management via `useState`
+- [CSS3](https://developer.mozilla.org/en-US/docs/Web/CSS) — Custom styling with Google Fonts (Figtree)
+- No external libraries or UI frameworks — built from scratch
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Prerequisites
+- Node.js (v14 or higher)
+- npm or yarn
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Clone the repository
+git clone https://github.com/your-username/snackstop.git
 
-### `npm run eject`
+# Navigate into the project folder
+cd snackstop
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# Install dependencies
+npm install
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Start the development server
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The app will open at `http://localhost:3000`.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
 
-## Learn More
+## 📁 Project Structure
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```
+snackstop/
+├── src/
+│   ├── App.js       # Main component — catalog, cart logic, order flow
+│   └── App.css      # All styles for the app
+├── public/
+│   └── index.html
+└── package.json
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
+## 🧠 How It Works
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- Product data (names, prices, images) is stored as arrays at the top of `App.js`
+- Cart state is a number array (one slot per product) tracking quantity per item
+- `pricecounter()` calculates the total by multiplying each item's quantity by its price
+- `showCart` and `isDone` booleans control which view is rendered
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🎨 Design Highlights
 
-### Making a Progressive Web App
+- Dark navy (`#00072D`) brand color throughout
+- Sticky top navigation bar with a live cart badge
+- Slide-in cart sidebar with smooth animation
+- Hover effects on product cards (lift + shadow)
+- Fully responsive — stacks to 2 columns on smaller screens
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
