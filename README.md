@@ -1,4 +1,4 @@
-<img src="https://cdn-icons-png.flaticon.com/512/10486/10486481.png" width="40" height="40" filter="brightness(0) invert(1)"/> SnackStop
+<h1><img src="public/logo.png" width="40" height="40" /> SnackStop</h1>
 A simple and clean snack ordering web app built with React. Browse a catalog of snacks, add them to your cart, adjust quantities, and place your order — all in one page.
 
 ---
